@@ -1,2 +1,2 @@
-# nextjs-java-grpc
-An example of communicating with Java from NextJS using gRPC
+# NextJS and Java Communication using gRPC
+An example of communicating with Java from NextJS using gRPC.
