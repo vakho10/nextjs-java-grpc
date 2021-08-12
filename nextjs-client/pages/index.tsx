@@ -33,11 +33,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
+      <main>
         <p className={styles.description}>
           Enter name and click sent button below
         </p>
@@ -49,7 +45,7 @@ const Home: NextPage = () => {
           </form>
         </div>
         <div className={styles.grid}>
-          <p>Output = {message || "Nothing"}</p>
+          <p>Response = {message || "Nothing"}</p>
         </div>
       </main>
     </div>
