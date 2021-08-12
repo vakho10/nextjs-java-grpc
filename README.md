@@ -12,4 +12,4 @@ Run the NextJS project using `npm run dev` command.
 
 Don't forget to rebuild the PROTO objects whenever you change your *.proto file in /proto folder. In Java, the generation part is done using the Maven PROTO plugin, but in NextJS, you have to run build-protoc.bat file manually. 
 
-P.S. you must specify full path to plugin applications: `grpc_tools_node_protoc_plugin` and `protoc-gen-ts.cmd`; in `build-protoc.bat file.
+P.S. you must specify full path to plugin applications: `grpc_tools_node_protoc_plugin` and `protoc-gen-ts.cmd`; in **build-protoc.bat** file.
