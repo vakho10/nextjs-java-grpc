@@ -6,7 +6,7 @@ An example of communicating with Java from NextJS using gRPC.
 # How to Build and Run Projects
 The main part is the /proto folder. It contains *.proto file, which is the service contract between gRPC client and gRPC server.
 
-Build the Java project using Maven command: `mvn package` and then run the JAR file (or run it from IntelliJ IDE).
+Build the Java projects using Maven. You must install the interface classes using `mvn clean install` in interface project directory. Then, you may run Spring Boot application from IntelliJ IDE.
 
 Run the NextJS project using `npm run dev` command.
 
