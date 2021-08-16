@@ -20,15 +20,18 @@ export default async function handler(
 
   const client = new services.GreeterClient("localhost:50051", credentials.createInsecure());
 
-  const response = await new Promise<string>((resolve, reject) => {
-    client.sayHello(helloRequest, (error, response) => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(response.getMessage());
-      }
+  try {
+    const response = await new Promise<string>((resolve, reject) => {
+      client.sayHello(helloRequest, (error, response) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(response.getMessage());
+        }
+      });
     });
-  });
-
-  res.status(200).json({ message: response });
+    res.status(200).json({ message: response });
+  } catch (error) {
+    res.status(500).send(error);
+  }
 }

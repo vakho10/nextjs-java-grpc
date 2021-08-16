@@ -18,10 +18,16 @@ const Home: NextPage = () => {
       body: JSON.stringify({ name })
     })
       .then(response => response.json())
-      .then(json => setMessage(json.message))
+      .then(json => {
+        // If it is error
+        if (json.code) {
+          throw json;
+        }
+        setMessage(json.message)
+      })
       .catch(error => {
         console.error(error);
-        alert(error);
+        alert(error.details);
       });
   };
 
